@@ -1,0 +1,25 @@
+---
+title: Report
+author: Josef Schweik
+date: 1 April 2016
+output: pdf_document
+fontsize: 10pt
+geometry: margin=1in
+---
+
+
+```{r setup, include=FALSE}
+library(knitr)
+
+# Use pdf plots rather than jpeg.
+opts_chunk$set(dev = 'pdf')
+```
+
+# First part
+
+```{r, results='hide', warnings=FALSE}
+```
+
+```{r, fig.height=5, fig.width=5}
+hist(rnorm(100))
+```

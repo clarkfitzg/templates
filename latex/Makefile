@@ -14,12 +14,17 @@ DATAFILE = normal.csv
 # Optional
 TABLES = quantiles.tex
 
+# Citations (.bib file)
+# Optional
+CITATIONS = citations.bib
 
 all: $(TEXFILE).pdf
 
-# Run pdflatex twice so that the figure references are correct.
+# Run pdflatex several times for correct references
 # $< references the first prerequisite
-$(TEXFILE).pdf: $(TEXFILE).tex $(FIGURES) $(TABLES)
+$(TEXFILE).pdf: $(TEXFILE).tex $(FIGURES) $(TABLES) $(CITATIONS)
+	pdflatex $<
+	bibtex $(REPORT).aux 
 	pdflatex $<
 	pdflatex $<
 
@@ -32,11 +37,8 @@ $(FIGURES) $(TABLES): analysis.py $(DATAFILE)
 view:
 	open $(TEXFILE).pdf
 
-clean:
-	rm *.aux
-	rm *.log
-	rm *.out
-	rm *.Rout
+clean :
+	rm {*.aux,*.bbl,*.blg,*.log,*.out}
 
 #$(FIGURES) : normal.R
 #R CMD BATCH --vanilla $<
