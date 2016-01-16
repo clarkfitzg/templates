@@ -15,18 +15,18 @@ DATAFILE = normal.csv
 TABLES = quantiles.tex
 
 # Citations (.bib file)
-# Optional
+# Optional, need to add as dependency
 CITATIONS = citations.bib
 
 all: $(TEXFILE).pdf
 
 # Run pdflatex several times for correct references
 # $< references the first prerequisite
-$(TEXFILE).pdf: $(TEXFILE).tex $(FIGURES) $(TABLES) $(CITATIONS)
+$(TEXFILE).pdf: $(TEXFILE).tex $(FIGURES) $(TABLES) 
 	pdflatex $<
-	bibtex $(REPORT).aux 
-	pdflatex $<
-	pdflatex $<
+	#bibtex $(REPORT).aux 
+	#pdflatex $<
+	#pdflatex $<
 
 $(DATAFILE): normal.py
 	python $<
@@ -38,7 +38,10 @@ view:
 	open $(TEXFILE).pdf
 
 clean :
-	rm {*.aux,*.bbl,*.blg,*.log,*.out}
+	rm {*.pdf,*.csv,*.aux,*.bbl,*.blg,*.log,*.out}
 
 #$(FIGURES) : normal.R
 #R CMD BATCH --vanilla $<
+
+viz.png: viz.dot
+	dot -Tpng $< -o $@

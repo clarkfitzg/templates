@@ -1,0 +1,8 @@
+digraph G {
+"scrape.py" -> "data.csv"
+"plots.R" -> "plots.pdf"
+"data.csv" -> "plots.pdf"
+"report.tex" -> "report.pdf"
+"plots.pdf" -> "report.pdf"
+"cite.bib" -> "report.pdf"
+}
