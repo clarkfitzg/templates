@@ -13,6 +13,10 @@ library(knitr)
 
 # Use pdf plots rather than jpeg.
 opts_chunk$set(dev = 'pdf')
+
+# digits to print out
+options(digits=5)
+
 ```
 
 # First part
