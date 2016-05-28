@@ -5,7 +5,10 @@ TEXFILE = report
 all: $(TEXFILE).pdf
 
 # $< references the first prerequisite
-$(TEXFILE).pdf: $(TEXFILE).tex
+$(TEXFILE).pdf: $(TEXFILE).tex citations.bib
+	pdflatex $<
+	bibtex $(TEXFILE).aux
+	pdflatex $<
 	pdflatex $<
 
 view:
