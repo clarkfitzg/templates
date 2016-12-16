@@ -2,8 +2,10 @@
 //#include <string> 
 
 
-void CPP_hello(int x)
+extern "C"
+void CPP_hello()
 {
     //std::string xs = std::to_string(42);
-    std::cout << "Hello " << x;
+    //std::cout << "Hello " << x;
+    std::cout << "Hello ";
 }

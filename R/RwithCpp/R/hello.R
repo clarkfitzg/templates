@@ -1,5 +1,6 @@
-hello = function(x)
+hello = function()
 {
-    x = as.integer(x)
-    .Call(CPP_hello, x)
+    #x = as.integer(x[1])
+    #.Call("CPP_hello", PACKAGE = "RwithCpp", x)
+    .Call("CPP_hello")
 }
