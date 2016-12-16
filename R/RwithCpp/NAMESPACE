@@ -1,0 +1,3 @@
+useDynLib(RwithCpp, .registration = TRUE)
+
+export(hello)
