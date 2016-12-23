@@ -1,3 +1,3 @@
 library("RwithCpp")
 
-hello(12)
+times2(2.5)
