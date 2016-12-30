@@ -4,5 +4,3 @@ xn = l2norm(x)
 
 # Should be 0
 xn - sum(x * x)
-
-y = setzeros(x)

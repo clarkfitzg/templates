@@ -1,3 +1,2 @@
 useDynLib(Callexample)
 export(l2norm)
-export(setzeros)
