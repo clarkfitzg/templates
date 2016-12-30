@@ -1,6 +1,8 @@
 library("Callexample")
 x = rnorm(10)
-b = l2norm(x)
+xn = l2norm(x)
 
 # Should be 0
-b - sum(d * d)
+xn - sum(x * x)
+
+y = setzeros(x)

@@ -7,6 +7,7 @@ setzeros = function(x)
 
     # Output is only returned by modifying arguments in place
     .C("setzeros", x, n)
+    x
 }
 
 
@@ -17,7 +18,7 @@ l2norm = function(x)
     n = as.integer(length(x))
 
     # Output is only returned by modifying arguments in place
-    out = 139.2
+    out = 0.0
     .C("l2norm", x, n, out)
     out
 }
