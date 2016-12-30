@@ -1,3 +1,7 @@
 library("RwithCpp")
 
-times2(2.5)
+n = 10
+a = rnorm(n)
+b = rnorm(n)
+
+ab = cdot(a, b)
