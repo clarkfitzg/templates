@@ -1,4 +1,4 @@
-library("Callexample")
+library("dotC")
 x = rnorm(10)
 xn = l2norm(x)
 

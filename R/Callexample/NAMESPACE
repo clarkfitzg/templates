@@ -1,2 +1,0 @@
-useDynLib(Callexample)
-export(l2norm)
