@@ -1,4 +1,4 @@
-Package: RdotCall
+Package: Callexample
 Type: Package
 Title: Demonstrate use of R's .Call() interface
 Version: 1.0
