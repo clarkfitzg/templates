@@ -1,9 +1,9 @@
 This is meant to be the minimum required to write a C binding to R using
-only the `.C()` interface.
+only the `.Call()` interface.
 
 ```
 
-library("dotC")
+library("dotCall")
 x = rnorm(10)
 xn = l2norm(x)
 
