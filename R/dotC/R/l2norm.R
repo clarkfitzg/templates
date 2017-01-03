@@ -8,5 +8,5 @@ l2norm = function(x)
     out = numeric(1)
 
     # .C returns list(out, x, n)
-    .C("l2norm", x, n, out = out)$out
+    .C(c_l2norm, x, n, out = out)$out
 }

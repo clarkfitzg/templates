@@ -2,7 +2,7 @@
 #include <Rinternals.h>
 
 // Dot product
-SEXP l2norm(SEXP x)
+SEXP c_l2norm(SEXP x)
 {
     // Create the new return object from within C
     SEXP out = PROTECT(allocVector(REALSXP, 1));

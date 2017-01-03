@@ -1,2 +1,2 @@
-useDynLib(cpp11)
+useDynLib(cpp11, c_l2norm)
 export(l2norm)

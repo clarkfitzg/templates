@@ -5,7 +5,7 @@ using std::vector;
 #include <Rinternals.h>
 
 
-double calc_l2norm(std::vector<double> x)
+double l2norm_work(std::vector<double> x)
 {
     double out = 0;
     for (auto& xi : x)
@@ -18,7 +18,7 @@ double calc_l2norm(std::vector<double> x)
 
 extern "C" {
 // Dot product
-SEXP l2norm(SEXP x)
+SEXP c_l2norm(SEXP x)
 {
     // Create the new return object from within C
     SEXP out = PROTECT(allocVector(REALSXP, 1));
@@ -35,7 +35,7 @@ SEXP l2norm(SEXP x)
     std::vector<double> xv;
     xv.assign(xp, xp + n);
 
-    *outp = calc_l2norm(xv);
+    *outp = l2norm_work(xv);
 
     UNPROTECT(1);
     return out;
