@@ -1,0 +1,7 @@
+Package: cppClass
+Type: Package
+Title: Demonstrate use of R's .Call() interface to access C++ classes
+Version: 1.0
+Date: 2016-12-16
+Author: Lucas Jackson
+License: BSD

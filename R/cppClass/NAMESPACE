@@ -1,0 +1,2 @@
+useDynLib()
+#export(l2norm)
