@@ -1,2 +1,2 @@
-useDynLib(dotCall)
+useDynLib(cpp11)
 export(l2norm)
