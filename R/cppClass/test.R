@@ -1,7 +1,7 @@
 library("cppClass")
 
 x = rnorm(10)
-xv = NumericVector(x)
+xv = new("NumericVector", data = x)
 
 xv + xv
 

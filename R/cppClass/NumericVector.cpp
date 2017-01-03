@@ -1,6 +1,12 @@
-#include <R.h>
-#include <Rinternals.h>
+#include <vector>
+using std::vector;
 
+
+class NumericVector
+{
+    std::vector<double> data;
+    double
+}
 
 double l2norm_work(std::vector<double> x)
 {
