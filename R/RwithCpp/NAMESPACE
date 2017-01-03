@@ -1,5 +1,0 @@
-# No idea why this doesn't work
-useDynLib(RwithCpp, CPP_hello)
-#useDynLib(RwithCpp)
-
-export(hello)
