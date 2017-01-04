@@ -1,13 +1,10 @@
-This is meant to be the minimum required to write a C binding to R using
-only the `.Call()` interface.
+This is meant to be the minimum required to represent an object oriented
+C++ library in R using references.
 
 ```
+library(cppClass)
 
-library("dotCall")
-x = rnorm(10)
-xn = l2norm(x)
-
-# Should be 0
-xn - sum(x * x)
-
+a = rnorm(10)
+b = NumericVector(a)
+l2norm(b)
 ```

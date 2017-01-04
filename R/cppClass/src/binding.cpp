@@ -2,6 +2,7 @@
 #include <Rinternals.h>
 
 #include <NumericVector.cpp>
+#include <references.cpp>
 
 
 extern "C" {
