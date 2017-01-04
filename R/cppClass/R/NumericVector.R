@@ -1,4 +1,4 @@
-setClass("NumericVector", slots = c(data = "numeric"))
+setClass("NumericVector", slots = c(ref = ))
 
 setMethod("+", signature(e1 = "NumericVector", e2 = "NumericVector"), function(e1, e2)
 {

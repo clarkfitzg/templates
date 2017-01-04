@@ -1,3 +1,4 @@
+#include <math.h>
 #include <R.h>
 #include <Rinternals.h>
 
@@ -17,6 +18,8 @@ SEXP c_l2norm(SEXP x)
     {
         *outp += xp[i] * xp[i];
     }
+    
+    *outp = sqrt(*outp);
 
     UNPROTECT(1);
     return out;

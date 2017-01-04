@@ -1,3 +1,4 @@
+#include <math.h>
 #include <vector>
 using std::vector;
 
@@ -12,7 +13,7 @@ double l2norm_work(std::vector<double> x)
     {
         out += xi * xi;
     }
-    return out;
+    return sqrt(out);
 }
 
 

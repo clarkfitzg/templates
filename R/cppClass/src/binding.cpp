@@ -1,27 +1,15 @@
 #include <R.h>
 #include <Rinternals.h>
 
-
-double l2norm_work(std::vector<double> x)
-{
-    double out = 0;
-    for (auto& xi : x)
-    {
-        out += xi * xi;
-    }
-    return out;
-}
+#include <NumericVector.cpp>
 
 
 extern "C" {
-// Dot product
+
 SEXP c_l2norm(SEXP x)
 {
-    // Create the new return object from within C
     SEXP out = PROTECT(allocVector(REALSXP, 1));
 
-    // C pointers to the actual data
-    double *xp = REAL(x);
     double *outp = REAL(out);
 
     int n = length(x);
@@ -37,4 +25,5 @@ SEXP c_l2norm(SEXP x)
     UNPROTECT(1);
     return out;
 }
-}
+
+} // end extern "C"

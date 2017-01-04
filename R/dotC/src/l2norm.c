@@ -1,3 +1,5 @@
+#include <math.h>
+
 // Dot product
 void c_l2norm(double *x, int *n, double *out)
 {
@@ -6,4 +8,5 @@ void c_l2norm(double *x, int *n, double *out)
     {
         *out += x[i] * x[i];
     }
+    *out = sqrt(*out);
 }
