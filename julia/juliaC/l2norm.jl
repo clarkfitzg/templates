@@ -1,13 +1,16 @@
 #!/usr/bin/env julia
 
 x = [3.0, 4.0]
-
-out = 0.0
+n = Cint(length(x))
+out = Ref{Cdouble}(0)
 
 # TODO: Follow this
 # http://docs.julialang.org/en/stable/manual/calling-c-and-fortran-code/#passing-pointers-for-modifying-inputs
+# Not obvious how to do this with arrays rather than scalars.
 ccall((:c_l2norm, "l2norm"), Void
-      , (Ptr{Float64}, Ptr{Int}, Ptr{Float64})
-      , Ref(x), Ref(length(x)), Ref(out))
+      , (Ref{Cdouble}, Ref{Cint}, Ref{Cdouble})
+      , Ref(x), Ref(n), Ref(out)
+      )
+      #, Ref(x), Ref(n), Ref(out))
 
 print(out, "\n")
