@@ -3,7 +3,7 @@
 #include <Rinternals.h>
 
 // Dot product
-SEXP c_l2norm(SEXP x, SEXP out)
+void c_l2norm(SEXP x, SEXP out)
 {
     // C pointers to the actual data
     double *xp = REAL(x);
