@@ -1,0 +1,7 @@
+Package: dotCallPROTECT
+Type: Package
+Title: Demonstrate use of R's .Call() interface along with PROTECT()
+Version: 1.0
+Date: 2016-12-16
+Author: Lucas Jackson
+License: BSD

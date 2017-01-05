@@ -3,8 +3,11 @@
 #include <Rinternals.h>
 
 // Dot product
-SEXP c_l2norm(SEXP x, SEXP out)
+SEXP c_l2norm(SEXP x)
 {
+    // Create the new return object from within C
+    SEXP out = PROTECT(allocVector(REALSXP, 1));
+
     // C pointers to the actual data
     double *xp = REAL(x);
     double *outp = REAL(out);
@@ -17,4 +20,7 @@ SEXP c_l2norm(SEXP x, SEXP out)
     }
     
     *outp = sqrt(*outp);
+
+    UNPROTECT(1);
+    return out;
 }

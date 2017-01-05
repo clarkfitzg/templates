@@ -1,0 +1,2 @@
+useDynLib(dotCallPROTECT, c_l2norm)
+export(l2norm)

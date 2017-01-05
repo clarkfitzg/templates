@@ -1,4 +1,6 @@
 l2norm = function(x)
 {
-    .Call(c_l2norm, as.numeric(x))
+    out = 0.0
+    .Call(c_l2norm, as.numeric(x), out)
+    out
 }
