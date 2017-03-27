@@ -1,2 +1,3 @@
-useDynLib(dotC, c_l2norm)
+useDynLib(dotC, c_l2norm, c_fit_ols)
 export(l2norm)
+export(fit_ols)
