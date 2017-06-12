@@ -1,3 +1,6 @@
+# TODO: sed command for switching name from pkgname to specific one
+
+
 # Not actually using these, but I may later
 # GNU specific:
 #RFILES := $(wildcard R/*.R)
