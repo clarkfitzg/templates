@@ -1,0 +1,8 @@
+# Title Here
+
+Write vignette.
+
+```{R}
+library(template)
+add(1, 2)
+```
