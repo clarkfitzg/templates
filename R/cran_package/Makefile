@@ -1,6 +1,6 @@
-RFILES!= ls R/*.R
-TESTFILES!= ls tests/testthat/test*.R
-VIGNETTES!= ls vignettes/*.Rmd
+RFILES = $(wildcard R/*.R)
+TESTFILES = $(wildcard tests/testthat/test*.R)
+VIGNETTES = $(wildcard vignettes/*.Rmd)
 
 PKG=template_0.0.1.tar.gz
 
@@ -13,7 +13,7 @@ test: $(TESTFILES)
 	make install
 	cd tests && Rscript testthat.R && cd ..
 
-$(PKG): $(RFILES) $(TESTFILES)
+$(PKG): $(RFILES) $(TESTFILES) $(VIGNETTES)
 	R CMD build .
 
 check: $(PKG)

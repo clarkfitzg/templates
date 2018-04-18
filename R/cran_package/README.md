@@ -5,7 +5,13 @@ uses standard development tools and passes the CRAN checks.
 To that end this directory contains a minimal R package
 template passing `R CMD check --as-cran`.
 
-It uses the following:
+[Writing R
+Extensions](https://cran.r-project.org/doc/manuals/r-devel/R-exts.html) is
+the authoritative resource for this material. Hadley Wickham's [R
+packages](http://r-pkgs.had.co.nz/) is also an excellent resource that I
+relied upon to put this together.
+
+This package uses the following:
 
 - Documentation generated with
   [roxygen2](https://cran.r-project.org/package=roxygen2)

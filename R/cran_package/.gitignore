@@ -2,3 +2,4 @@
 man/*
 *.Rcheck/*
 *.tar.gz
+inst/doc
