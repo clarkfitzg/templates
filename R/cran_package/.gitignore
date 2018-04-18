@@ -1,0 +1,4 @@
+# All generated
+man/*
+*.Rcheck/*
+*.tar.gz
