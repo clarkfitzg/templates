@@ -1,10 +1,11 @@
-# Package and version specific.
+# Generic Makefile that can live in the same directory as an R package.
 
-# CHANGE ME:
-PKG=template_0.0.1.tar.gz
+PKGNAME = $(shell awk '{if(/Package:/) print $$2}' DESCRIPTION)
+VERSION = $(shell awk '{if(/Version:/) print $$2}' DESCRIPTION)
+PKG = $(PKGNAME)_$(VERSION).tar.gz
 
-# The remainder of the Makefile is generic.
-#############################################################
+# Helpful for debugging:
+$(info R package is: $(PKG))
 
 RFILES = $(wildcard R/*.R)
 TESTFILES = $(wildcard tests/testthat/test*.R)
