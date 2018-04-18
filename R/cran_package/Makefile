@@ -13,7 +13,7 @@ test: $(TESTFILES)
 	make install
 	cd tests && Rscript testthat.R && cd ..
 
-$(PKG): $(RFILES) $(TESTFILES) $(VIGNETTES)
+$(PKG): $(RFILES) $(TESTFILES) $(VIGNETTES) DESCRIPTION
 	R CMD build .
 
 check: $(PKG)
