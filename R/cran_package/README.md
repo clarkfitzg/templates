@@ -3,7 +3,7 @@
 When starting a new package it makes sense to start with something that
 uses standard development tools and passes the CRAN checks.
 To that end this directory contains a minimal R package
-template passing `R CMD check --as-cran`.
+template passing `R CMD check --as-cran`. 
 
 [Writing R
 Extensions](https://cran.r-project.org/doc/manuals/r-devel/R-exts.html) is
@@ -20,3 +20,14 @@ This package uses the following:
   [knitr](https://cran.r-project.org/package=knitr)
 - [GNU Make](https://www.gnu.org/software/make/) for automation (optional,
   you can use other tools)
+
+
+When I test this everything in the Makefile works and there are no
+`WARNINGS` or `ERRORS`.  There is only a single `NOTE`:
+
+```
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Tom Sawyer <foo@bar.com>’
+
+New submission
+```
