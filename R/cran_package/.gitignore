@@ -3,3 +3,4 @@ man/*
 *.Rcheck/*
 *.tar.gz
 inst/doc
+vignettes/*.html
